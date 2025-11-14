@@ -1,0 +1,16 @@
+# Optional Render manifest — you can also configure via Render web UI
+services:
+  - type: web
+    name: capstone-project
+    env: python
+    region: oregon
+    plan: free
+    branch: main
+    autoDeploy: true
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn src.server.app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: API_KEY
+        sync: false
