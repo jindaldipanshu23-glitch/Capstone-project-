@@ -1,0 +1,12 @@
+langchain>=0.0.300
+openai
+chromadb
+tqdm
+python-dotenv
+fastapi
+uvicorn
+# Optional Vertex AI (only if you plan to deploy)
+google-cloud-aiplatform[agent_engines,langchain]==1.28.0
+cloudpickle==3.0.0
+pydantic>=2.10
+requests
